@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Article;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,10 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('admin.articles.index');
+    {   
+        $articles = Article::all();
+        // dd($articles);
+        return view('admin.articles.index', compact('articles'));
     }
 
     /**
