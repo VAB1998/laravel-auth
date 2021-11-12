@@ -28,6 +28,6 @@ Route::middleware('auth')
     ->name('admin.')
     ->prefix('admin')
     ->group(function() {
-        Route::get('/articles','ArticleController@index')->name('articles');
+        Route::resource('/articles','ArticleController');
     });
 
