@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Ciao Sono Admin Home</h1>
-    <a href=" {{ route('admin.articles.index') }} ">Go to articles</a>
+    <section id="admin_home">
+        <h2 class="text-center">Hai effettuato  l'accesso, 
+            <a class="text-center" href=" {{ route('admin.articles.index') }} ">Go to articles</a>
+        </h2>
+    </section>
 @endsection
